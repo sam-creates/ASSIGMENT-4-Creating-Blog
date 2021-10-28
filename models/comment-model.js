@@ -8,7 +8,7 @@ export const commentSchema = new Schema({
     required: true,
   },
 
-
+  //posted comment
   comment: {
     type: String,
   },
