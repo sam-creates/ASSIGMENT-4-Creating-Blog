@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
-import { commentSchema } from "./comment-model";
+import { CommentSchema } from "./comment-model";
 const { Schema, model } = mongoose;
 
-export const postSchema = new Schema({
+export const PostSchema = new Schema({
 
   //title of post
   title: {
@@ -35,7 +35,7 @@ export const postSchema = new Schema({
 
   //displays all comments on post
   comments: {
-    type: [commentSchema],
+    type: [CommentSchema],
   },
 
   //likes for a specific post
@@ -51,6 +51,6 @@ export const postSchema = new Schema({
   },
 });
 
-const postModel = model("post", postSchema);
+const PostModel = model("post", postSchema);
 
-export default postModel;
+export default PostModel;
